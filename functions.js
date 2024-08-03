@@ -426,24 +426,33 @@ function prepareAssets() {
   let html = localStorage.getItem("saved").replace(/ text;/g, ";\n-webkit-background-clip: text;");
 
   main.innerHTML = html;
-  helper()
+  
+  let all = main.querySelectorAll("*");
+
+  helper();
   setTimeout(() => selectElement(), 20)
   let code = document.querySelector("#code");
   code.innerText = "";
 
-  len = (localStorage.getItem("len") != null) ? localStorage.getItem("len") : 0;
+  len = (localStorage.getItem("len")) ? localStorage.getItem("len") : 0;
   let sels = [].slice.call(main.querySelectorAll("*"));
   selected = sels[len];
 
-  classCounter = (localStorage.getItem("cC") != null) ? localStorage.getItem("cC") : 0;
-  idCounter = (localStorage.getItem("iC") != null) ? localStorage.getItem("iC") : 0;
+  classCounter = (localStorage.getItem("cC")) ? localStorage.getItem("cC") : 0;
+  idCounter = (localStorage.getItem("iC")) ? localStorage.getItem("iC") : 0;
 
 
-  if (html === null || html === "") {
+  if (!html || html === "") {
     len = 0;
+    idCounter = 0;
+    classCounter = 0;
+  }
+  
+  if(!all.length) {
     idCounter = 0;
     classCounter = 0;
   }
 
   showEls();
+  
 }

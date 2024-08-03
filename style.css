@@ -185,8 +185,9 @@ font-size: 20px;
 font-weight: 900;
 }
 
+
 #lower > div{
-width: 350%;
+width: 450%;
 overflow-x: scroll;
 padding-inline: 5px;
 }

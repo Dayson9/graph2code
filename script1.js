@@ -134,7 +134,11 @@ upperI[4].ontouchstart = function() {
 }
 
 upperI[5].ontouchstart = function() {
-  printInfo("Oops!, feature not yet added")
+  main.innerHTML = "";
+  printInfo("Canvas cleared");
+  idCounter = 0;
+  classCounter = 0;
+  localStorage.clear();
 }
 
 upperI[6].ontouchstart = function() {
@@ -446,3 +450,9 @@ lowerI[19].onclick = () => {
 lowerI[20].onclick = () => appendStyle("Padding", "padding", "style", 0, 0);
 
 lowerI[21].onclick = () => appendStyle("Src", "src", "", 0, 1);
+
+lowerI[22].onclick = () => appendStyle("Box-Sizing", "box-sizing", "style", 0, 0);
+
+lowerI[23].onclick = () => appendStyle("Margin", "margin", "style", 0, 0);
+
+lowerI[24].onclick = () => appendStyle("Display", "display", "style", 0, 0);
