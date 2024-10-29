@@ -426,7 +426,7 @@ function prepareAssets() {
   let html = localStorage.getItem("saved").replace(/ text;/g, ";\n-webkit-background-clip: text;");
 
   main.innerHTML = html;
-  
+
   let all = main.querySelectorAll("*");
 
   helper();
@@ -447,12 +447,12 @@ function prepareAssets() {
     idCounter = 0;
     classCounter = 0;
   }
-  
-  if(!all.length) {
+
+  if (!all.length) {
     idCounter = 0;
     classCounter = 0;
   }
 
   showEls();
-  
+
 }
